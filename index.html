@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUEVA GRANADA - Archivos [2524 D.C.]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+    <div class="scanline-overlay"></div>
+
+    <header class="bg-black/70 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-cyan-500/20">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <!-- Logo/Title Area -->
+            <div class="flex-shrink-0">
+                <a href="#" class="block"> <!-- Enlace al inicio, por ejemplo -->
+                    <h1 class="text-2xl sm:text-3xl font-bold accent-cyan glitch-effect" data-text="NUEVA GRANADA">NUEVA
+                        GRANADA</h1>
+                    <p class="text-xs sm:text-sm accent-yellow -mt-1 sm:mt-0">[ACCESO: 2524 D.C.]</p>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex md:items-center">
+                <ul class="flex space-x-1 lg:space-x-2 text-[10px] lg:text-xs xl:text-sm">
+                    <li><a href="#cultural"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">CULTURAL</a>
+                    </li>
+                    <li><a href="#social"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">SOCIAL</a>
+                    </li>
+                    <li><a href="#politico"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">POLÍTICO</a>
+                    </li>
+                    <li><a href="#economico"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">ECONÓMICO</a>
+                    </li>
+                    <li><a href="#gastronomico"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">GASTRONOMÍA</a>
+                    </li>
+                    <li><a href="#ciudades"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">CIUDADES</a>
+                    </li>
+                    <li><a href="#vida_diaria"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">VIDA
+                            DIARIA</a></li>
+                    <li><a href="#medios"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">MEDIOS</a>
+                    </li>
+                    <li><a href="#vulnerables"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">Z.
+                            VULNERABLES</a></li>
+                    <li><a href="#problematicas"
+                            class="nav-link accent-magenta hover:accent-yellow transition-colors duration-300 px-2 py-1">PROBLEMÁTICAS</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" type="button" class="text-gray-300 hover:text-cyan-400 focus:outline-none">
+                    <span class="sr-only">Abrir menú principal</span>
+                    <!-- Icono Hamburguesa -->
+                    <svg class="h-6 w-6 block" id="icon-open" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- Icono Cerrar (X) -->
+                    <svg class="h-6 w-6 hidden" id="icon-close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (se muestra/oculta con JS) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <ul class="flex flex-col space-y-1 items-center">
+                    <li><a href="#cultural"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">CULTURAL</a>
+                    </li>
+                    <li><a href="#social"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">SOCIAL</a>
+                    </li>
+                    <li><a href="#politico"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">POLÍTICO</a>
+                    </li>
+                    <li><a href="#economico"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">ECONÓMICO</a>
+                    </li>
+                    <li><a href="#gastronomico"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">GASTRONOMÍA</a>
+                    </li>
+                    <li><a href="#ciudades"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">CIUDADES</a>
+                    </li>
+                    <li><a href="#vida_diaria"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">VIDA
+                            DIARIA</a></li>
+                    <li><a href="#medios"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">MEDIOS</a>
+                    </li>
+                    <li><a href="#vulnerables"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">ZONAS
+                            VULNERABLES</a></li>
+                    <li><a href="#problematicas"
+                            class="nav-link-mobile accent-magenta hover:accent-yellow transition-colors duration-300 block px-3 py-2 rounded-md text-base font-medium">OTRAS
+                            PROBLEMÁTICAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="bienvenida"
+            class="my-12 p-6 bg-gray-900/50 border border-gray-700 rounded-lg shadow-md shadow-cyan-500/10">
+            <h2 class="text-3xl font-bold accent-yellow mb-4 terminal-text">// INFORME PRELIMINAR: NUEVA GRANADA</h2>
+            <p class="text-gray-300 leading-relaxed">
+                El mundo como se conocía ha desaparecido bajo las arenas del <strong class="accent-magenta">Secarral
+                    Ecuatorial</strong>.
+                Nueva Granada, una confederación precaria forjada sobre los restos de la antigua Gran Colombia y
+                fragmentos de Brasil,
+                lucha por la supervivencia en un planeta hostil. Las megacorporaciones ejercen un poder feudal,
+                mientras grupos revolucionarios, paramilitares corporativos y criminales acechan en las sombras,
+                alimentados por la desesperación de un mundo sin recursos. Este es un vistazo a su realidad, 500 años en
+                el futuro.
+            </p>
+        </section>
+
+        <!-- Sección Cultural -->
+        <section id="cultural" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-cyan mb-6 pb-2 border-b-2 border-accent-cyan terminal-text">//
+                TRASFONDO CULTURAL</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-magenta transition-all duration-300 shadow-sm hover:shadow-magenta-500/30">
+                    <h3 class="text-xl font-semibold accent-magenta mb-2">Sincretismo Extremo</h3>
+                    <p class="text-sm text-gray-300">Fusión de tradiciones indígenas revitalizadas, restos de cultura
+                        mestiza del s.XXI y omnipresentes influencias corporativas (mandarín, japonés, inglés como
+                        lenguas francas en enclaves).</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-magenta transition-all duration-300 shadow-sm hover:shadow-magenta-500/30">
+                    <h3 class="text-xl font-semibold accent-magenta mb-2">Neo-Indigenismo y Eco-Espiritualidad</h3>
+                    <p class="text-sm text-gray-300">Retorno a cosmovisiones indígenas ante la catástrofe. Chamanes y
+                        guías espirituales respetados. Rituales de conexión con la tierra.</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-magenta transition-all duration-300 shadow-sm hover:shadow-magenta-500/30">
+                    <h3 class="text-xl font-semibold accent-magenta mb-2">Cultura Corporativa</h3>
+                    <p class="text-sm text-gray-300">En feudos corporativos: eficiencia, lealtad a la marca, consumismo
+                        adaptado. Lenguas corporativas dominantes.</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-magenta transition-all duration-300 shadow-sm hover:shadow-magenta-500/30">
+                    <h3 class="text-xl font-semibold accent-magenta mb-2">Cultura de Resistencia</h3>
+                    <p class="text-sm text-gray-300">En zonas grises y entre revolucionarios: "neo-folk" contestatario,
+                        muralismo digital, narrativas orales "desde abajo".</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-magenta transition-all duration-300 shadow-sm hover:shadow-magenta-500/30">
+                    <h3 class="text-xl font-semibold accent-magenta mb-2">Nostalgia por el "Mundo Verde"</h3>
+                    <p class="text-sm text-gray-300">Profunda melancolía por la biodiversidad perdida. Archivos
+                        digitales de selvas y océanos son tesoros.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Social -->
+        <section id="social" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-yellow mb-6 pb-2 border-b-2 border-accent-yellow terminal-text">//
+                TRASFONDO SOCIAL</h2>
+            <div class="space-y-4">
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-cyan transition-all duration-300 shadow-sm hover:shadow-cyan-500/30">
+                    <h3 class="text-xl font-semibold accent-cyan mb-2">Sociedad Fragmentada</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                        <li><strong class="text-gray-100">Ciudadanos Corporativos:</strong> En Arcologías, acceso a
+                            recursos, bajo vigilancia.</li>
+                        <li><strong class="text-gray-100">Urbanitas de la Unión:</strong> Ciudades de NG, racionamiento,
+                            infraestructura decadente.</li>
+                        <li><strong class="text-gray-100">Pobladores del Límite:</strong> Fronteras del desierto,
+                            escasez, presión corporativa.</li>
+                        <li><strong class="text-gray-100">Desplazados/Nómadas del Desierto:</strong> Supervivencia en el
+                            Secarral, bandidaje.</li>
+                    </ul>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-cyan transition-all duration-300 shadow-sm hover:shadow-cyan-500/30">
+                    <h3 class="text-xl font-semibold accent-cyan mb-2">Clanes y Familias Extendidas</h3>
+                    <p class="text-sm text-gray-300">Lealtad familiar/clánica fundamental ante debilidad del estado.</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-cyan transition-all duration-300 shadow-sm hover:shadow-cyan-500/30">
+                    <h3 class="text-xl font-semibold accent-cyan mb-2">Castas Tecnológicas</h3>
+                    <p class="text-sm text-gray-300">Acceso y dominio de tecnología definen estatus. "Tech-Shamans" o
+                        "Chatarreros Sabios" importantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Política -->
+        <section id="politico" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-green mb-6 pb-2 border-b-2 border-green-500 terminal-text">//
+                ORGANIZACIÓN POLÍTICA</h2>
+            <div
+                class="bg-gray-800/70 p-6 rounded-lg border border-gray-700 shadow-md hover:shadow-green-500/30 transition-all duration-300">
+                <h3 class="text-2xl font-semibold accent-green mb-3">La Confederación de Nueva Granada</h3>
+                <p class="text-sm text-gray-300 mb-3">República federal nominal. Gobierno central (Consejo de Regentes)
+                    en Ciudad Eje (Bogotá Vertical) con poder limitado.</p>
+                <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+                    <li><strong class="text-gray-100">Regiones Autónomas:</strong> Gobernadores locales con milicias, a
+                        menudo influenciados por megacorps.</li>
+                    <li><strong class="text-gray-100">Feudos Corporativos:</strong> Yamato AgriTech, SinoHydro
+                        Solutions, AmeriCore Resources. Leyes y fuerzas propias. Pagan "tasas" al Consejo.</li>
+                    <li><strong class="text-gray-100">Zonas Grises/Sin Ley:</strong> Dominadas por señores de la guerra,
+                        criminales o revolucionarios.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección Económica -->
+        <section id="economico" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-magenta mb-6 pb-2 border-b-2 border-accent-magenta terminal-text">//
+                TRASFONDO ECONÓMICO</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-yellow transition-all duration-300 shadow-sm hover:shadow-yellow-500/30">
+                    <h3 class="text-xl font-semibold accent-yellow mb-2">Economía de Escasez y Reciclaje</h3>
+                    <p class="text-sm text-gray-300">Gestión de agua, alimentos (cultivados/sintéticos), energía (solar,
+                        geotérmica, fusión corporativa), minerales. Masivo sector de reciclaje.</p>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-yellow transition-all duration-300 shadow-sm hover:shadow-yellow-500/30">
+                    <h3 class="text-xl font-semibold accent-yellow mb-2">Moneda: El "Sol Real" (SR$)</h3>
+                    <p class="text-sm text-gray-300">Criptomoneda del Consejo de Regentes, con componente físico. En
+                        feudos, "créditos corporativos". Trueque común en zonas pobres.</p>
+                </div>
+                <div
+                    class="card md:col-span-2 bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-yellow transition-all duration-300 shadow-sm hover:shadow-yellow-500/30">
+                    <h3 class="text-xl font-semibold accent-yellow mb-2">Sectores Clave</h3>
+                    <p class="text-sm text-gray-300">Agrotecnología (granjas verticales, hidroponía), Gestión Hídrica
+                        (desalinización, recolección niebla), Minería y Recuperación, Seguridad (pública/privada).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Gastronómica -->
+        <section id="gastronomico" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-cyan mb-6 pb-2 border-b-2 border-accent-cyan terminal-text">//
+                GASTRONOMÍA DE SUPERVIVENCIA</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-green transition-all duration-300 shadow-sm hover:shadow-green-500/30">
+                    <h3 class="text-xl font-semibold accent-green mb-2">Cocina de la Necesidad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                        <li><strong class="text-gray-100">Proteínas Alternativas:</strong> Insectos (harinas,
+                            fritos/asados). Carne sintética/laboratorio para pudientes.</li>
+                        <li><strong class="text-gray-100">Vegetales Resistentes:</strong> Tubérculos andinos, quínoa,
+                            amaranto, variedades GM.</li>
+                        <li><strong class="text-gray-100">Procesados y Suplementos:</strong> Pastas nutritivas, barras
+                            energéticas, bebidas enriquecidas.</li>
+                    </ul>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-green transition-all duration-300 shadow-sm hover:shadow-green-500/30">
+                    <h3 class="text-xl font-semibold accent-green mb-2">Lujos y Fusiones</h3>
+                    <p class="text-sm text-gray-300 mb-2">Carne animal "real" o frutas no modificadas son lujos. Café y
+                        cacao son tesoros. "Arepas de Grillo con Salsa Teriyaki", "Sancocho de Yuca con Fideos de Arroz
+                        Sintético y Algas Nori".</p>
+                    <p class="text-sm text-gray-300"><strong class="text-gray-100">Bebidas:</strong> Agua purificada
+                        (racionada), infusiones, "chicha" adaptada, refrescos sintéticos corporativos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secciones restantes (abreviadas por espacio, pero sigue el mismo patrón) -->
+        <section id="ciudades" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-yellow mb-6 pb-2 border-b-2 border-accent-yellow terminal-text">//
+                PRINCIPALES CIUDADES</h2>
+            <div class="space-y-4">
+                <p class="text-sm text-gray-300 p-4 bg-gray-800/70 rounded-lg border border-gray-700"><strong
+                        class="accent-yellow">Ciudad Eje (Bogotá Vertical):</strong> Capital administrativa. Rascacielos
+                    y niveles subterráneos.</p>
+                <p class="text-sm text-gray-300 p-4 bg-gray-800/70 rounded-lg border border-gray-700"><strong
+                        class="accent-yellow">Neo-Medellín:</strong> Hub tecnológico, presencia de megacorps.
+                    "Tech-artesanos".</p>
+                <p class="text-sm text-gray-300 p-4 bg-gray-800/70 rounded-lg border border-gray-700"><strong
+                        class="accent-yellow">Puerto Esperanza (Ant. Guayaquil):</strong> Puerto vital,
+                    plantas desalinizadoras.</p>
+                <p class="text-sm text-gray-300 p-4 bg-gray-800/70 rounded-lg border border-gray-700"><strong
+                        class="accent-yellow">Bastión Andino (La Paz):</strong> Ciudades de altura,
+                    agricultura de montaña, minería.</p>
+                <p class="text-sm text-gray-300 p-4 bg-gray-800/70 rounded-lg border border-gray-700"><strong
+                        class="accent-yellow">Arcologías Corporativas:</strong> "Yamato Prime", "SinoHydro Oasis",
+                    "AmeriCore Citadel".</p>
+            </div>
+        </section>
+
+        <section id="vida_diaria" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-magenta mb-6 pb-2 border-b-2 border-accent-magenta terminal-text">//
+                VIDA DIARIA (URBANITA NO-CORP)</h2>
+            <div
+                class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-cyan transition-all duration-300 shadow-sm hover:shadow-cyan-500/30">
+                <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+                    <li>Despertar con sirena de racionamiento de agua.</li>
+                    <li>Desayuno: gachas enriquecidas, sustituto de café.</li>
+                    <li>Transporte: buses eléctricos sobrecargados, bicicletas, caminatas.</li>
+                    <li>Trabajo: talleres, reciclaje, comida callejera, "micro-gigs" digitales.</li>
+                    <li>Comida: arepas (insectos/vegetales sintéticos), proteína racionada si hay suerte.</li>
+                    <li>Entretenimiento: Holo-novelas baratas, música reciclada, juegos callejeros, Red Comunal.</li>
+                    <li>Preocupaciones: Agua, comida, seguridad, salud, Tormentas de Polvo.</li>
+                    <li>Comunidad: Ayuda mutua vecinal, desconfianza a extraños.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="medios" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-green mb-6 pb-2 border-b-2 border-green-500 terminal-text">// MEDIOS
+                CULTURALES</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-yellow transition-all duration-300 shadow-sm hover:shadow-yellow-500/30">
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                        <li>Holo-Redes Comunitarias</li>
+                        <li>Radio Pirata y Cadenas de Voz</li>
+                        <li>Muralismo Efímero (Digital/Analógico)</li>
+                    </ul>
+                </div>
+                <div
+                    class="card bg-gray-800/70 p-5 rounded-lg border border-gray-700 hover:border-accent-yellow transition-all duration-300 shadow-sm hover:shadow-yellow-500/30">
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                        <li>Bibliotecas de Datos Rescatados</li>
+                        <li>Teatro Callejero y Cuentacuentos</li>
+                        <li>Música Fusión Andina-Electrónica-Industrial</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="vulnerables" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-cyan mb-6 pb-2 border-b-2 border-accent-cyan terminal-text">// ZONAS
+                MÁS VULNERABLES</h2>
+            <div class="space-y-3">
+                <p class="text-sm text-gray-300 p-3 bg-gray-800/60 rounded border border-gray-700/50"><strong
+                        class="accent-red-500">La Franja del Secarral:</strong> Incursiones, lucha por oasis.</p>
+                <p class="text-sm text-gray-300 p-3 bg-gray-800/60 rounded border border-gray-700/50"><strong
+                        class="accent-red-500">Periferias Urbanas (Zonas Grises):</strong> Dominio de bandas, cultos.
+                </p>
+                <p class="text-sm text-gray-300 p-3 bg-gray-800/60 rounded border border-gray-700/50"><strong
+                        class="accent-red-500">Territorios Indígenas Aislados:</strong> Presión corporativa por
+                    recursos.</p>
+                <p class="text-sm text-gray-300 p-3 bg-gray-800/60 rounded border border-gray-700/50"><strong
+                        class="accent-red-500">Corredores de Contrabando:</strong> Violencia entre crimen organizado.
+                </p>
+            </div>
+        </section>
+
+        <section id="problematicas" class="my-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold accent-magenta mb-6 pb-2 border-b-2 border-accent-magenta terminal-text">//
+                OTRAS PROBLEMÁTICAS SOCIALES</h2>
+            <div class="bg-gray-900/70 p-6 rounded-lg border border-gray-600 shadow-lg shadow-magenta-500/20">
+                <ul class="columns-1 md:columns-2 text-sm text-gray-300 space-y-2 list-inside">
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Crisis Hídrica Permanente</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Eco-Ansiedad y Trauma
+                        Climático</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Mutaciones y Enfermedades por
+                        Contaminación</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Adicción a Escapes
+                        Virtuales/Químicos</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Trata de Personas y Esclavitud
+                        Moderna</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Fundamentalismos y Cultos
+                        Apocalípticos</li>
+                    <li class="before:content-['>_'] before:text-magenta-500 before:mr-2">Xenofobia y Conflictos
+                        Interregionales</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 mt-16 border-t border-gray-700/50">
+        <p class="text-xs text-gray-500 terminal-text">// FIN DE TRANSMISIÓN - SISTEMA DE ARCHIVOS NUEVA GRANADA //</p>
+        <p class="text-xs text-gray-600 mt-1">© 2524 Consejo de Regentes. Acceso no autorizado sujeto a purga de datos.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

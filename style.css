@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #0a0a0f;
+  color: #c0c0e0;
+  overflow-x: hidden;
+}
+
+.terminal-text {
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.accent-cyan {
+  color: #00ffff;
+}
+
+.accent-magenta {
+  color: #ff00ff;
+}
+
+.accent-yellow {
+  color: #ffff00;
+}
+
+.accent-green {
+  color: #00ff00;
+}
+
+.border-accent-cyan {
+  border-color: #00ffff;
+}
+
+.border-accent-magenta {
+  border-color: #ff00ff;
+}
+
+.border-accent-yellow {
+  border-color: #ffff00;
+}
+
+.glitch-effect {
+  position: relative;
+  animation: glitch-animation 0.3s infinite alternate-reverse;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+.glitch-effect::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00ff;
+  /* Magenta */
+  animation: glitch-anim-before 3s infinite linear alternate-reverse;
+}
+
+.glitch-effect::after {
+  left: -2px;
+  text-shadow: -1px 0 #00ffff;
+  /* Cyan */
+  animation: glitch-anim-after 4s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-animation {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%);
+  }
+
+  10% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 70%, 0 70%);
+  }
+
+  20% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 50%, 0 50%);
+  }
+
+  /* ... más pasos para un glitch más complejo si se desea ... */
+  100% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes glitch-anim-before {
+  0% {
+    clip-path: inset(80% 0 0 0);
+  }
+
+  20% {
+    clip-path: inset(20% 0 50% 0);
+  }
+
+  40% {
+    clip-path: inset(0 0 20% 0);
+  }
+
+  60% {
+    clip-path: inset(60% 0 10% 0);
+  }
+
+  80% {
+    clip-path: inset(30% 0 40% 0);
+  }
+
+  100% {
+    clip-path: inset(90% 0 0 0);
+  }
+}
+
+@keyframes glitch-anim-after {
+  0% {
+    clip-path: inset(0 0 90% 0);
+  }
+
+  20% {
+    clip-path: inset(40% 0 30% 0);
+  }
+
+  40% {
+    clip-path: inset(10% 0 70% 0);
+  }
+
+  60% {
+    clip-path: inset(70% 0 0 0);
+  }
+
+  80% {
+    clip-path: inset(50% 0 25% 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 80% 0);
+  }
+}
+
+/* Custom scrollbar para un look más tech */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00baba;
+}
+
+header h1 {
+  font-family: "Orbitron", sans-serif;
+}
+
+section h2 {
+  font-family: "Orbitron", sans-serif;
+}
+
+.card h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 8px #ff00ff;
+  /* Magenta glow on hover */
+  color: #ffd700;
+  /* Gold on hover */
+}
+
+/* Scanline effect */
+.scanline-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 28, 0) 0%,
+    rgba(18, 18, 28, 0.1) 50%,
+    rgba(18, 18, 28, 0) 100%
+  );
+  background-size: 100% 4px;
+  /* Ajusta el '4px' para cambiar el grosor de las scanlines */
+}
